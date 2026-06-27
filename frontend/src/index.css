@@ -2,11 +2,11 @@
   --font-sans: 'Inter', system-ui, sans-serif;
   
   /* Nexus Design System / Dark Mode colors */
-  --color-bg: #0F172A; /* Slate 900 */
-  --color-surface: #1E293B; /* Slate 800 */
-  --color-surface-hover: #334155; /* Slate 700 */
-  --color-primary: #3B82F6; /* Blue 500 */
-  --color-primary-hover: #2563EB;
+  --color-bg: #000000; /* Pure Black */
+  --color-surface: #111111; /* Dark Gray Surface */
+  --color-surface-hover: #1A1A1A; /* Slightly lighter on hover */
+  --color-primary: #10B981; /* Emerald Green */
+  --color-primary-hover: #059669; /* Darker Green */
   --color-danger: #EF4444; /* Red 500 */
   --color-danger-hover: #DC2626;
   --color-success: #10B981; /* Emerald 500 */
@@ -14,7 +14,7 @@
   --color-text: #F8FAFC; /* Slate 50 */
   --color-text-muted: #94A3B8; /* Slate 400 */
   
-  --color-border: #334155;
+  --color-border: #222222;
   
   /* 4px spacing tokens */
   --space-1: 4px;

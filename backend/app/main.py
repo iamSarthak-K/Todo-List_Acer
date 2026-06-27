@@ -49,6 +49,9 @@ from app.routers.focus import router as focus_router
 from app.routers.reminders import router as reminders_router
 from app.routers.analytics import router as analytics_router
 from app.routers.ai import router as ai_router
+from app.routers.channels import router as channels_router
+from app.routers.rituals import router as rituals_router
+from app.routers.calendar import router as calendar_router
 
 app.include_router(auth_router)
 app.include_router(commitments_router)
@@ -57,6 +60,9 @@ app.include_router(focus_router)
 app.include_router(reminders_router)
 app.include_router(analytics_router)
 app.include_router(ai_router)
+app.include_router(channels_router)
+app.include_router(rituals_router)
+app.include_router(calendar_router)
 
 @app.get("/")
 def root():

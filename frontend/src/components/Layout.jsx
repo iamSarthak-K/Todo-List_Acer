@@ -10,6 +10,7 @@ function Layout({ user, onLogout }) {
         </div>
         <ul className="nav-links">
           <li><NavLink to="/dashboard" className={({isActive}) => isActive ? 'active' : ''}>Dashboard</NavLink></li>
+          <li><NavLink to="/today" className={({isActive}) => isActive ? 'active' : ''}>Today</NavLink></li>
           <li><NavLink to="/commitments" className={({isActive}) => isActive ? 'active' : ''}>Commitments</NavLink></li>
           <li><NavLink to="/focus" className={({isActive}) => isActive ? 'active' : ''}>Focus</NavLink></li>
           <li><NavLink to="/analytics" className={({isActive}) => isActive ? 'active' : ''}>Analytics</NavLink></li>

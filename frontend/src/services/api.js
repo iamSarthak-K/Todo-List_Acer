@@ -62,9 +62,25 @@ export const getRecommendation = () => req("GET", "/api/focus/recommend");
 export const getTodayStats = () => req("GET", "/api/focus/today");
 export const getFocusTasks = () => req("GET", "/api/focus/tasks");
 
-// ── Reminders ──────────────────────────────────────────────────────
+// ── Reminders & Calendar ───────────────────────────────────────────
 export const getReminders = () => req("GET", "/api/reminders");
 export const recordAction = (id, action) => req("POST", `/api/reminders/${id}/action`, { action });
+export const getCalendarEvents = (days = 4, timeMin = null, timeMax = null) => {
+  let url = `/api/calendar/events?days=${days}`;
+  if (timeMin && timeMax) {
+    url += `&time_min=${encodeURIComponent(timeMin)}&time_max=${encodeURIComponent(timeMax)}`;
+  }
+  return req("GET", url);
+};
 
 // ── Analytics ──────────────────────────────────────────────────────
 export const getFullReport = () => req("GET", "/api/analytics/report");
+
+// ── Generic API Client ─────────────────────────────────────────────
+const api = {
+  get: (path) => req("GET", path),
+  post: (path, body) => req("POST", path, body),
+  patch: (path, body) => req("PATCH", path, body),
+  delete: (path) => req("DELETE", path),
+};
+export default api;
