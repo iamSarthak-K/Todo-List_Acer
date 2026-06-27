@@ -48,6 +48,7 @@ from app.routers.tasks import router as tasks_router
 from app.routers.focus import router as focus_router
 from app.routers.reminders import router as reminders_router
 from app.routers.analytics import router as analytics_router
+from app.routers.ai import router as ai_router
 
 app.include_router(auth_router)
 app.include_router(commitments_router)
@@ -55,6 +56,7 @@ app.include_router(tasks_router)
 app.include_router(focus_router)
 app.include_router(reminders_router)
 app.include_router(analytics_router)
+app.include_router(ai_router)
 
 @app.get("/")
 def root():

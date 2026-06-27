@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     NVIDIA_API_KEY: str = ""
     NVIDIA_BASE_URL: str = "https://integrate.api.nvidia.com/v1"
     NVIDIA_MODEL: str = "nvidia/llama-3.1-nemotron-70b-instruct"
+    GEMINI_API_KEY: str = ""
     REDIS_URL: str = "redis://localhost:6379/0"
     GOOGLE_CLIENT_ID: str = ""
     GOOGLE_CLIENT_SECRET: str = ""
@@ -31,6 +32,8 @@ class Settings(BaseSettings):
 
 @lru_cache()
 def get_settings() -> Settings:
-    return Settings()
+    settings = Settings()
+    print(f"GEMINI_API_KEY: {settings.GEMINI_API_KEY}")
+    return settings
 
 settings = get_settings()
