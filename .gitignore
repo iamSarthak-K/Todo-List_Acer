@@ -10,6 +10,8 @@ backend/venv/
 *.sqlite
 .DS_Store
 .env
+CHANGELOG_AUTH_CALENDAR_SYNC.md
+PROJECT_ARCHITECTURE_AND_FLOW.md
 
 # Logs and databases
 *.log
